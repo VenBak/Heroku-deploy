@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -58,40 +58,40 @@ function App() {
       {/* Here we are calling the renderPage method which will return a component 
       {renderPage()} */}
           <div className="container">
-            <Routes>
+            <Switch>
               <Route
-                path="/post/:postId"
-                element={<SinglePost />}
+                exact path="/post/:postId"
+                component={<SinglePost />}
               />
               <Route
-                path="/login"
-                element={<Login />}
+                exact path="/login"
+                component={<Login />}
               />
               <Route
-                path="/signup"
-                element={<Signup />}
+                exact path="/signup"
+                component={<Signup />}
               />
               <Route
-                path="/update"
-                element={<Update />}
+                exact path="/update"
+                component={<Update />}
               />
               <Route
-                path="/createpost"
-                element={<CreatePost />}
+                exact path="/createpost"
+                component={<CreatePost />}
               />
               <Route 
-                path="/home" 
-                element={<Home />} 
+                exact path="/home" 
+                component={<Home />} 
               />
               <Route 
-                path="/about" 
-                element={<About/>} 
+                exact path="/about" 
+                component={<About/>} 
               />
               {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
               /> */}
-            </Routes>
+            </Switch>
           </div>
           <Footer />
         </div>
