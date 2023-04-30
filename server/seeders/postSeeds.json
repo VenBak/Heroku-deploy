@@ -1,0 +1,17 @@
+[
+    {
+        "postText": "seed post 1 text",
+        "postTitle": "seed post 1 title",
+        "postAuthor": "seed post 1 author"
+    },
+    {
+        "postText": "seed post 2 text",
+        "postTitle": "seed post 2 title",
+        "postAuthor": "seed post 2 author"
+    },
+    {
+        "postText": "seed post 3 text",
+        "postTitle": "seed post 3 title",
+        "postAuthor": "seed post 3 author"
+    }
+]
