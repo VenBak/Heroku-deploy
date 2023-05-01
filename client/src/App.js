@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -58,40 +58,40 @@ function App() {
       {/* Here we are calling the renderPage method which will return a component 
       {renderPage()} */}
           <div className="container">
-            <Switch>
+            <Routes>
               <Route
                 exact path="/post/:postId"
-                component={<SinglePost />}
+                element={<SinglePost />}
               />
               <Route
                 exact path="/login"
-                component={<Login />}
+                element={<Login />}
               />
               <Route
                 exact path="/signup"
-                component={<Signup />}
+                element={<Signup />}
               />
               <Route
                 exact path="/update"
-                component={<Update />}
+                element={<Update />}
               />
               <Route
                 exact path="/createpost"
-                component={<CreatePost />}
+                element={<CreatePost />}
               />
               <Route 
                 exact path="/home" 
-                component={<Home />} 
+                element={<Home />} 
               />
               <Route 
                 exact path="/about" 
-                component={<About/>} 
+                element={<About/>} 
               />
               {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
               /> */}
-            </Switch>
+            </Routes>
           </div>
           <Footer />
         </div>
